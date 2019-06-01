@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="..static/Dashboard/assets/img/house.png">
+  <link rel="icon" type="image/png" href="../static/Dashboard/assets/img/house.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Tables
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="../static/Dashboard/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../static/Dashboard/assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../static/Dashboard/assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="white" data-active-color="danger">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+      <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          <div class="logo-image-small">
+            <img src="../static/Dashboard/assets/img/lora.png">
+          </div>
+        </a>
+        <div class="simple-text logo-normal">
+           <h6 style="color:SlateBlue;">Lora node</h6>
+        </div>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li>
+            <a href="/index/dashboard">
+              <i class="nc-icon nc-bank"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="active ">
+            <a href="/index/tables">
+              <i class="nc-icon nc-tile-56"></i>
+              <p>Table List</p>
+            </a>
+          </li>
+          <li>
+            <a href="/index/Graph1">
+              <i class="fas fa-chart-line"></i></i>
+              <p>Graph Node 1</p>
+            </a>
+          </li>
+          <li>
+            <a href="/index/Graph2">
+              <i class="fas fa-chart-line"></i>
+              <p>Graph Node 2</p>
+            </a>
+          </li>
+          <li>
+            <a href="/index/about">
+              <i class="fas fa-address-card"></i>
+              <p>About</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="#pablo">Table (Node Parameters)</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <form>
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="nc-icon nc-zoom-split"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link btn-magnify" href="#pablo">
+                  <i class="nc-icon nc-layout-11"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Stats</span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item btn-rotate dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="nc-icon nc-bell-55"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Some Actions</span>
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn-rotate" href="#pablo">
+                  <i class="nc-icon nc-settings-gear-65"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Account</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <!-- <div class="panel-header panel-header-sm">
+  
+  
+</div> -->
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title"> Node 1 Parameters</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                <form method = "GET" action = /user/tables>
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <th>
+                        Nhiệt độ
+                      </th>
+                      <th>
+                        Độ ẩm không khí 
+                      </th>
+                      <th>
+                        Độ ẩm đất
+                      </th>
+                    </thead>
+                    <% if (foo_table) {%>
+				              <% for (var i = foo_table.length - 4; i < foo_table.length ; i++){%>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <%= foo_table[i].nhietdo%>
+                        </td>
+                        <td>
+                          <%= foo_table[i].doamkhongkhi%>
+                        </td>
+                        <td>
+                          <%= foo_table[i].doamdat%>
+                        </td>
+                      </tr>
+                    </tbody>
+                      <%}%>
+			              <%}%>
+                  </table>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card card-plain">
+              <div class="card-header">
+                <h4 class="card-title"> Node 2 Parameters </h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                <form method = "GET" action = "/user/tables">
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <th>
+                        Nhiệt Độ
+                      </th>
+                      <th>
+                        Độ Ẩm
+                      </th>
+                      <th>
+                        PH 
+                      </th>
+                      <th class = "text-right">
+                        Oxy Hòa Tan
+                      </th>
+                    </tbody>
+                    <% if (bar_table) {%>
+				              <% for (var i = bar_table.length - 4; i < bar_table.length ; i++){%>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <%= bar_table[i].nhietdo%>
+                        </td>
+                        <td>
+                          <%= bar_table[i].doam%>
+                        </td>
+                        <td>
+                          <%= bar_table[i].ph%>
+                        </td>
+                        <td class = "text-right">
+                          <%= bar_table[i].oxyhoatan%>
+                        </td>
+                      </tr>
+                    </tbody>
+                      <%}%>
+			              <%}%>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../static/Dashboard/assets/js/core/jquery.min.js"></script>
+  <script src="../static/Dashboard/assets/js/core/popper.min.js"></script>
+  <script src="../static/Dashboard/assets/js/core/bootstrap.min.js"></script>
+  <script src="../static/Dashboard/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../static/Dashboard/assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../static/Dashboard/assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../static/Dashboard/assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+  <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../static/Dashboard/assets/demo/demo.js"></script>
+</body>
+
+</html>

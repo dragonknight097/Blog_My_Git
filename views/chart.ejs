@@ -1,0 +1,34 @@
+  <!DOCTYPE html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var table = <%- JSON.stringify(bar_table) %>;
+        var dataT = [['x', 'y']];
+        for (var i = 0; i < table.length; i++)
+        {
+          dataT.push([parseInt(table[i].id), parseInt(table[i].nhietdo)])
+        }
+  
+        var data = google.visualization.arrayToDataTable(dataT);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </body>
+</html>

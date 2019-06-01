@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/house.png">
+  <link rel="icon" type="image/png" href="../static/Dashboard/assets/img/house.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Dashboard
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link rel = 'stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+  <!-- CSS Files -->
+  <link href="../static/Dashboard/assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../static/Dashboard/assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../static/Dashboard/assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="white" data-active-color="danger">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+      <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          <div class="logo-image-small">
+            <img src="../static/Dashboard/assets/img/iot.png">
+          </div>
+        </a>
+        <div class="simple-text logo-normal">
+          <h6 style="color:SlateBlue;">Lora node</h6>
+        </div>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="active ">
+            <a href="/index/dashboard">
+              <i class="nc-icon nc-bank"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li>
+            <a href="/index/TableNode1">
+              <i class="fas fa-book"></i>
+              <p>Table Node 1</p>
+            </a>
+          </li>
+          <li>
+            <a href="/index/TableNode2">
+              <i class="fas fa-dice-d6"></i>
+              <p>Table Node 2</p>
+            </a>
+          </li>
+          <li>
+            <a href="/index/Graph1">
+              <i class="fas fa-chart-line"></i></i>
+              <p>Graph Node 1</p>
+            </a>
+          </li>
+          <li>
+            <a href="/index/Graph2">
+              <i class="fas fa-chart-area"></i>
+              <p>Graph Node 2</p>
+            </a>
+          </li>
+          <li>
+            <a href="/index/about">
+              <i class="fas fa-dragon"></i>
+              <p>About</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href=""> Dashboard</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <form>
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="nc-icon nc-zoom-split"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link btn-magnify" href="#pablo">
+                  <i class="nc-icon nc-layout-11"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Stats</span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item btn-rotate dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="nc-icon nc-bell-55"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Some Actions</span>
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn-rotate" href="#pablo">
+                  <i class="nc-icon nc-settings-gear-65"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Account</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <!-- <div class="panel-header panel-header-lg">
+  
+  <canvas id="bigDashboardChart"></canvas>
+  
+  
+</div> -->
+      <div class="content">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+              <div class="card-body ">
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i> <img class="fas fa-temperature-low" src = "../static/Dashboard/assets/img/images.png"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                  <form method = "GET" action = user/Dashboard>
+                    <div class="numbers">
+                    <% if (foo_table) {%>
+				              <% for (var i = foo_table.length - 1; i < foo_table.length ; i++){%>
+                      <p class="card-category">Temperature</p>
+                      <p class="card-title"><%= foo_table[i].nhietdo%>°C
+                        <p>
+                        <%}%>
+			                <%}%>
+                    </div>
+                  </div>
+                  </form>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                  <i class="fa fa-refresh"></i> Update Now
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+              <div class="card-body ">
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i> <img class="fas fa-tint" src = "../static/Dashboard/assets/img/Humidity.png"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                  <form method = "GET" action = 'user/Dashboard'>
+                    <div class="numbers">
+                      <% if (bar_table) {%>
+				                <% for (var i = bar_table.length - 1; i < bar_table.length ; i++){%>
+                      <p class="card-category">Humidity</p>
+                      <p class="card-title"><%= bar_table[i].doam%>%
+                        <p>
+                       <%}%>
+			                <%}%>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                   <i class="fa fa-refresh"></i> Update Now
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+              <div class="card-body ">
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i> <img class="fas fa-cloud" src = "../static/Dashboard/assets/img/Atmosphere.jpg"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <form method = "GET" action = 'user/Dashboard'>
+                    <div class="numbers">
+                      <% if (foo_table) {%>
+				                <% for (var i = foo_table.length - 1; i < foo_table.length ; i++){%>
+                      <p class="card-category">Air-Humidity</p>
+                      <p class="card-title"><%= foo_table[i].doamkhongkhi%>%
+                        <p>
+                        <%}%>
+			                <%}%>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                   <i class="fa fa-refresh"></i> Update Now
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+              <div class="card-body ">
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i> <img class="fas fa-thermometer" src ="../static/Dashboard/assets/img/PH.png"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                  <form method = "GET" action = 'user/Dashboard'>
+                    <div class="numbers">
+                      <% if (bar_table) {%>
+				                <% for (var i = bar_table.length - 1; i < bar_table.length ; i++){%>
+                      <p class="card-category">PH</p>
+                      <p class="card-title"><%= bar_table[i].ph%>
+                        <p>
+                      <%}%>
+			                <%}%> 
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                  <i class="fa fa-refresh"></i> Update now
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card ">
+              <div class="card-header ">
+                <h5 class="card-title" style="color:DodgerBlue;">Temp Parameters</h5>
+                <i> <h3 class="card-category">24 Hours performance</h> </i>
+              </div>
+              <div id="curve_chart" style="width: 1100px; height: 600px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../static/Dashboard/assets/js/core/jquery.min.js"></script>
+  <script src="../static/Dashboard/assets/js/core/popper.min.js"></script>
+  <script src="../static/Dashboard/assets/js/core/bootstrap.min.js"></script>
+  <script src="../static/Dashboard/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Chart JS -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="../static/Dashboard/assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../static/Dashboard/assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../static/Dashboard/assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+  <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../static/Dashboard/assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+      demo.initChartsPages();
+    });
+  </script>
+  <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var table = <%- JSON.stringify(bar_table) %>;
+        var dataT = [['x', 'Temp']];
+        for (var i = 0; i < table.length; i++)
+        {
+          dataT.push([parseInt(table[i].id), parseInt(table[i].nhietdo)])
+        }
+  
+        var data = google.visualization.arrayToDataTable(dataT);
+
+        var options = {
+          title: 'Temperature Performance',
+          hAxis: {
+            title: 'Times'
+          },
+          vAxis: {
+            title: 'Temperature (°C)'
+          },
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+  </script>
+</body>
+
+</html>
