@@ -44,8 +44,8 @@ exports.addPump = Entity => {
 }
 
 exports.loadPump = Entity => {
-    var sql = `select * from users where email = '${Entity}'`;
-    return db.load(sql);
+    var sql = `select * from pump`;
+    return db.insert(sql);
 };
 
 // exports.loadByPassword = Entity => {

@@ -6,7 +6,6 @@ var router = express.Router();
 
 router.get('/node1', (req, res) => {
     resp.loadAll().then(rows => {
-        //console.log(rows);
         return res.json({
             node1: rows,
             status: 'success',
@@ -20,7 +19,6 @@ router.get('/node1', (req, res) => {
 
 router.get('/node2', (req, res) => {
     resp.loadAll2().then(rows => {
-        //console.log(rows);
         return res.json({
             node2: rows,
             status: 'success',
@@ -77,12 +75,8 @@ router.post('/Pump', (req, res) => {
 });
 
 router.get('/GetPump', (req, res) => {
-    resp.loadPump().then(result => {
-        return res.json({
-            PumpData: rows,
-            length: row.length,
-            status: 'success'
-        }).catch(err => {
+    resp.loadPump().then(rows => {
+        return res.json(rows).catch(err => {
             console.log(err);
             res.statusCode = 500;
         })
