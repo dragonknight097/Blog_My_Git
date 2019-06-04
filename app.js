@@ -67,20 +67,34 @@ app.use('/index', indexCtrl);
 
 io.on('connection', (socket) => {
     console.log('Connected');
-    // socket.on('connection', (socketon) => {
-    //     console.log(socketon);
-    // });
-    // socket.on('table 1', (data) => {
-    //     axios.get('http://localhost:3000/Router/node1').then((result) => {
-    //         socket.emit('Receive Data Table 1', result.data.node1);
-    //     })
-    //     console.log('Connected' + result.data.node1);
-    // });
-    axios.get('http://localhost:3000/Router/node1').then((result) => {
-        socket.emit('Receive Data Table 1', result.data.node1);
-    })
-    socket.on('disconnect', (dis) =>{
+    socket.on('disconnect', (dis) => {
         console.log('disconnected');
+    })
+    socket.on('table 1', (data) => {
+        axios.get('http://localhost:3000/Router/node1').then((result) => {
+            socket.emit('Receive Data Table 1', result.data.node1);
+            //console.log(result.data.node1);
+        })
+    })
+    socket.on('table 2', (data) => {
+        axios.get('http://localhost:3000/Router/node2').then((result) => {
+            socket.emit('Receive Data Table 2', result.data.node2);
+            //console.log(result.data.node2);
+        })
+    })
+    
+    socket.on('chart 1', (data) => {
+        axios.get('http://localhost:3000/Router/node1').then((result) => {
+            socket.emit('Receive Data Chart 1', result.data.node1);
+            //console.log(result.data.node2);
+        })
+    })
+
+    socket.on('chart 2', (data) => {
+        axios.get('http://localhost:3000/Router/node2').then((result) => {
+            socket.emit('Receive Data Chart 2', result.data.node2);
+            //console.log(result.data.node2);
+        })
     })
 });
 

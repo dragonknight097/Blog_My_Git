@@ -6,7 +6,7 @@ var router = express.Router();
 
 router.get('/node1', (req, res) => {
     resp.loadAll().then(rows => {
-        console.log(rows);
+        //console.log(rows);
         return res.json({
             node1: rows,
             status: 'success',
@@ -20,7 +20,7 @@ router.get('/node1', (req, res) => {
 
 router.get('/node2', (req, res) => {
     resp.loadAll2().then(rows => {
-        console.log(rows);
+        //console.log(rows);
         return res.json({
             node2: rows,
             status: 'success',
@@ -34,7 +34,6 @@ router.get('/node2', (req, res) => {
 })
 
 router.post('/addBlog', (req, res) => {
-    res.set('Content-type', 'application/json');
     console.log('req.body', req.body);
     resp.addBlog(req.body)
         .then(value => {
@@ -49,7 +48,6 @@ router.post('/addBlog', (req, res) => {
 });
 
 router.post('/addBlog_2', (req, res) => {
-    res.set('Content-type', 'application/json');
     console.log('req.body', req.body);
     resp.addBlog_2(req.body)
         .then(value => {
@@ -65,8 +63,7 @@ router.post('/addBlog_2', (req, res) => {
 
 router.post('/Pump', (req, res) => {
     console.log(req.body);
-    resp.addPump(req.body)
-        .then(result => {
+    resp.addPump(req.body).then(rows => {
             res.statusCode = 200;
             return res.json({
                 PumpData: rows,
