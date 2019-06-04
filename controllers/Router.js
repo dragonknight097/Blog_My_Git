@@ -71,8 +71,22 @@ router.post('/Pump', (req, res) => {
                 status: 'success'
             })
         }).catch(err => {
+            console.log(err);
             res.statusCode = 500;
         })
 });
+
+router.get('/GetPump', (req, res) => {
+    resp.loadPump().then(result => {
+        return res.json({
+            PumpData: rows,
+            length: row.length,
+            status: 'success'
+        }).catch(err => {
+            console.log(err);
+            res.statusCode = 500;
+        })
+})
+})
 
 module.exports = router;
