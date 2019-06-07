@@ -9,7 +9,7 @@ router.get('/node1', (req, res) => {
         return res.json({
             node1: rows,
             status: 'success',
-            length: rows.length
+            length1: rows.length
         })  
     }).catch(err => {
         console.log(err);
@@ -22,7 +22,7 @@ router.get('/node2', (req, res) => {
         return res.json({
             node2: rows,
             status: 'success',
-            length: rows.length
+            length2: rows.length
         })  
     }).catch(err => {
         console.log(err);
@@ -76,7 +76,10 @@ router.post('/Pump', (req, res) => {
 
 router.get('/GetPump', (req, res) => {
     resp.loadPump().then(rows => {
-        return res.json(rows).catch(err => {
+        for (var i = rows.length - 1; i < rows.length; i++){
+            value = rows[i];
+        }
+        return res.json(value).catch(err => {
             console.log(err);
             res.statusCode = 500;
         })

@@ -96,6 +96,20 @@ io.on('connection', (socket) => {
             //console.log(result.data.node2);
         })
     })
+
+    socket.on('home 1', (data) => {
+        console.log('connected home 1');
+        axios.get('http://localhost:3000/Router/node1').then((result) => {
+            socket.emit('Data Home 1', result.data.node1);
+        })
+    })
+
+    socket.on('home 2', (data) => {
+        console.log('connected home 2');
+        axios.get('http://localhost:3000/Router/node2').then((result) => {
+            socket.emit('Data Home 2', result.data.node2);
+        })
+    })
 });
 
 http.listen(3000, function(){

@@ -38,8 +38,8 @@ exports.loadByEmail = Entity => {
 };
 
 exports.addPump = Entity => {
-    var sql = `insert into pump (Auto, Timer, Pump1, Pump2, Pump3)
-    values('${Entity.Auto}', '${Entity.Timer}', '${Entity.Pump1}', '${Entity.Pump2}', '${Entity.Pump3}')`
+    var sql = `insert into pump (Auto, node, Timer, Pump1, Pump2, Pump3)
+    values('${Entity.Auto}', '${Entity.node}', '${Entity.Timer}', '${Entity.Pump1}', '${Entity.Pump2}', '${Entity.Pump3}')`
     return db.insert(sql);
 }
 
