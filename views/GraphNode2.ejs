@@ -194,7 +194,7 @@
       function drawChart() {
         var table = <%- JSON.stringify(Table) %>;
         var dataT = [['x', 'Temp']];
-        for (var i = 0; i < table.length; i++)
+        for (var i = table.length - 10; i < table.length; i++)
         {
           dataT.push([parseInt(table[i].id), parseInt(table[i].nhietdo)])
         }
@@ -225,7 +225,7 @@
       function drawChart() {
         var table = <%- JSON.stringify(Table) %>;
         var dataT = [['x', 'Humi']];
-        for (var i = 0; i < table.length; i++)
+        for (var i = table.length - 10; i < table.length; i++)
         {
           dataT.push([parseInt(table[i].id), parseInt(table[i].doam)])
         }
@@ -256,7 +256,7 @@
       function drawChart() {
         var table = <%- JSON.stringify(Table) %>;
         var dataT = [['x', 'ph']];
-        for (var i = 0; i < table.length; i++)
+        for (var i = table.length - 10; i < table.length; i++)
         {
           dataT.push([parseInt(table[i].id), parseInt(table[i].ph)])
         }
@@ -287,7 +287,7 @@
       function drawChart() {
         var table = <%- JSON.stringify(Table) %>;
         var dataT = [['x', 'Oxy']];
-        for (var i = 0; i < table.length; i++)
+        for (var i = table.length - 10; i < table.length; i++)
         {
           dataT.push([parseInt(table[i].id), parseInt(table[i].oxyhoatan)])
         }

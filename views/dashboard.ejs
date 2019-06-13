@@ -320,7 +320,7 @@
       function drawChart() {
         var table = <%- JSON.stringify(bar_table) %>;
         var dataT = [['x', 'Temp']];
-        for (var i = 0; i < table.length; i++)
+        for (var i = table.length - 10; i < table.length; i++)
         {
           dataT.push([parseInt(table[i].id), parseInt(table[i].nhietdo)])
         }
