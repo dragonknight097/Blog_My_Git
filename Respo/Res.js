@@ -48,6 +48,16 @@ exports.loadPump = Entity => {
     return db.insert(sql);
 };
 
+exports.addthreshold = Entity => {
+    var sql = `insert into threshold_t (nhietdo_t, doam_t, doamkhongkhi_t, doamdat_t, ph_t, oxyhoatan_t)
+    values('${Entity.nhietdo_t}', '${Entity.doam_t}', '${Entity.doamkhongkhi_t}', '${Entity.doamdat_t}', '${Entity.ph_t}', '${Entity.oxyhoatan_t}')`
+    return db.insert(sql);
+}
+
+exports.loadthreshold = Entity => {
+    var sql = `select * from threshold_t`;
+    return db.insert(sql);
+};
 // exports.loadByPassword = Entity => {
 //     var sql = `select * from users where password = '${Entity.password}'`;
 //     return db.insert(sql);

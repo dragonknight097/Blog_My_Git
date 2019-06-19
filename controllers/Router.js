@@ -86,4 +86,31 @@ router.get('/GetPump', (req, res) => {
 })
 })
 
+router.post('/Threshold', (req, res) => {
+    console.log(req.body);
+    resp.addthreshold(req.body).then(rows => {
+            res.statusCode = 200;
+            return res.json({
+                Threshold: rows,
+                length: rows.length,
+                status: 'success'
+            })
+        }).catch(err => {
+            console.log(err);
+            res.statusCode = 500;
+        })
+});
+
+router.get('/GetThreshold', (req, res) => {
+    resp.loadthreshold().then(rows => {
+        return res.json({
+            thresholddata: rows,
+            lengththreshold: rows.length,
+            status: 'success'
+        }).catch(err => {
+            console.log(err);
+            res.statusCode = 500;
+        })
+})
+})
 module.exports = router;
