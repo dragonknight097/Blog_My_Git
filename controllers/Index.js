@@ -22,8 +22,6 @@ router.get('/Dashboard', function (req, res) {
     var table2 = resp.loadAll2();
 
     Promise.all([table1, table2]).then(function([rows1, rows2]){
-        console.log('table1: ',rows1);
-        console.log('table2: ',rows2);
         res.render('Dashboard', {foo_table: rows1, bar_table: rows2});
     })
 });

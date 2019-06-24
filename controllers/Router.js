@@ -4,6 +4,12 @@ var resp = require('../Respo/Res');
 
 var router = express.Router();
 
+const PDFDocument = require('pdfkit');
+
+const fs = require('fs');
+
+const doc = new PDFDocument();
+
 router.get('/node1', (req, res) => {
     resp.loadAll().then(rows => {
         return res.json({
@@ -113,4 +119,5 @@ router.get('/GetThreshold', (req, res) => {
         })
 })
 })
+
 module.exports = router;

@@ -10,6 +10,7 @@
   "author": "Thành",
   "license": "ISC",
   "dependencies": {
+    "array-to-table": "^1.0.1",
     "axios": "^0.18.0",
     "bcrypt": "^3.0.5",
     "body-parser": "^1.18.3",
@@ -20,8 +21,11 @@
     "express-generator": "^4.16.0",
     "express-session": "^1.15.6",
     "http-errors": "^1.7.2",
+    "jspdf": "^1.5.3",
+    "jspdf-autotable": "^3.1.1",
     "morgan": "^1.9.1",
     "mysql": "^2.16.0",
+    "pdfkit": "^0.10.0",
     "q": "^1.5.1",
     "socket.io": "^2.2.0"
   },

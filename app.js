@@ -69,7 +69,10 @@ io.on('connection', (socket) => {
     console.log('Connected');
     socket.on('disconnect', (dis) => {
         console.log('disconnected');
-    })
+    }),
+    socket.on('join', function(room) {
+        socket.join(room);
+    });
     socket.on('table 1', (data) => {
         axios.get('http://localhost:3000/Router/node1').then((result) => {
             socket.emit('Receive Data Table 1', result.data.node1);
